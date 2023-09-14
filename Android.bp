@@ -173,17 +173,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libCB",
+	name: "libVkLayer_q3dtools",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/libCB.so"],
+			srcs: ["proprietary/vendor/lib/libVkLayer_q3dtools.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libCB.so"],
+			srcs: ["proprietary/vendor/lib64/libVkLayer_q3dtools.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -193,17 +193,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libOpenCL",
+	name: "libadreno_app_profiles",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/libOpenCL.so"],
+			srcs: ["proprietary/vendor/lib/libadreno_app_profiles.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libOpenCL.so"],
+			srcs: ["proprietary/vendor/lib64/libadreno_app_profiles.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -353,6 +353,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libgpudataproducer",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libgpudataproducer.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libgpudataproducer.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libgsl",
 	owner: "xiaomi",
 	strip: {
@@ -404,26 +424,6 @@ cc_prebuilt_library_shared {
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libllvm-glnext.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libllvm-qcom",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libllvm-qcom.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libllvm-qcom.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -1258,6 +1258,24 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	relative_install_path: "rfsa/adsp",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libarcsoft_dualcam_refocus_skel",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so"],
 		},
 	},
 	compile_multilib: "32",
@@ -2130,6 +2148,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libCB",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libCB.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libGPreqcancel",
 	owner: "xiaomi",
 	strip: {
@@ -2155,6 +2190,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libGPreqcancel_svc.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libOpenCL",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libOpenCL.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -2504,6 +2556,40 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libhexagon_nn_stub",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhexagon_nn_stub.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libhta_hexagon_runtime",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libhta_hexagon_runtime.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libizat_client_api",
 	owner: "xiaomi",
 	strip: {
@@ -2555,6 +2641,40 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libkcl",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkcl.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libkernelmanager",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkernelmanager.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libkeymasterdeviceutils",
 	owner: "xiaomi",
 	strip: {
@@ -2597,6 +2717,23 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/liblbs_core.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libllvm-qcom",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libllvm-qcom.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -2852,6 +2989,40 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libnlnetmgr.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libnpu",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libnpu.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "liboemcrypto",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liboemcrypto.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -3584,6 +3755,74 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/qtimutex.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "unnhal-acc-adreno",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/unnhal-acc-adreno.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "unnhal-acc-common",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/unnhal-acc-common.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "unnhal-acc-hta",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/unnhal-acc-hta.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "unnhal-acc-hvx",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/unnhal-acc-hvx.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -4939,6 +5178,40 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libaptXHD_encoder",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libaptXHD_encoder.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libaptX_encoder",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libaptX_encoder.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libdiag_system",
 	owner: "xiaomi",
 	strip: {
@@ -5127,24 +5400,6 @@ cc_prebuilt_library_shared {
 	system_ext_specific: true,
 }
 
-cc_prebuilt_library_shared {
-	name: "vendor.qti.imsrtpservice@3.1_system_ext",
-	stem: "vendor.qti.imsrtpservice@3.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	system_ext_specific: true,
-}
-
 android_app_import {
 	name: "CACertService",
 	owner: "xiaomi",
@@ -5212,6 +5467,41 @@ android_app_import {
 }
 
 android_app_import {
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
+	owner: "xiaomi",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "HotwordEnrollmentXGoogleHEXAGON",
+	owner: "xiaomi",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "MotoSignatureApp",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/app/MotoSignatureApp/MotoSignatureApp.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -5219,6 +5509,43 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "MotoDolbyDax3",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk",
+	overrides: ["MusicFX"],
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "MotorolaSettingsProvider",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "daxService",
+	owner: "xiaomi",
+	apk: "proprietary/system_ext/priv-app/daxService/daxService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 	system_ext_specific: true,
 }
 
@@ -5272,6 +5599,27 @@ dex_import {
 }
 
 dex_import {
+	name: "com.android.hotwordenrollment.common.util",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.motorola.frameworks.core.addon",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.motorola.frameworks.core.addon.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.motorola.motosignature",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.motorola.motosignature.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "com.qti.dpmframework",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
@@ -5282,6 +5630,27 @@ dex_import {
 	name: "dpmapi",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "moto-checkin",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/moto-checkin.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "moto-settings",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/moto-settings.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "moto",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/moto.jar"],
 	system_ext_specific: true,
 }
 
@@ -5297,6 +5666,24 @@ dex_import {
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
 	system_ext_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "android.hardware.neuralnetworks@1.3-service-qti-hta",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "android.hardware.neuralnetworks@1.3-service-qti",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -5421,8 +5808,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5434,8 +5821,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5447,8 +5834,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5460,8 +5847,21 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.neuralnetworks@1.3-service-qti",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5473,8 +5873,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5486,8 +5886,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5499,8 +5899,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5512,8 +5912,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
@@ -5525,8 +5925,8 @@ cc_prebuilt_binary {
 	strip: {
 		none: true,
 	},
-	prefer: true,
 	relative_install_path: "hw",
+	prefer: true,
 	soc_specific: true,
 }
 
